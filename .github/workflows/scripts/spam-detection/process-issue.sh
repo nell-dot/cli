@@ -13,13 +13,6 @@ set -euo pipefail
 # This allows the script to be run from any directory.
 SPAM_DIR="$(dirname "$(realpath "$0")")"
 
-_issue_url="$1"
-if [[ -z "$_issue_url" ]]; then
-    echo "error: issue URL is empty" >&2
-    exit 1
-fi
-
-_result="$("$SPAM_DIR/check-issue.sh" "$_issue_url")"
 
 if [[ "$_result" == "PASS" ]]; then
     echo "detected as not-spam: $_issue_url"

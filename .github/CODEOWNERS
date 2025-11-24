@@ -12,4 +12,4 @@ pkg/cmd/release/shared/ @cli/package-security
 
 test/integration/attestation-cmd @cli/package-security
 
-pkg/cmd/attestation/verification/embed/tuf-repo.github.com/ @cli/tuf-root-reviewers
+
